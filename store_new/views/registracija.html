@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registracija</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .modal-footer{
+        justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registracijaMdl">
+    Launch demo modal
+</button>
+
+    <!-- Modal -->
+<div class="modal fade" id="registracijaMdl" tabindex="-1" role="dialog" aria-labelledby="registracijaTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Registracija</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form action="/register" method="post">
+                <div class="container" style="max-width:350px">
+                    <div class="form-floating" style="padding-block-end: 0.15cm">
+                        <input type="text" class="form-control" placeholder="Uporabniško ime" name="uid" required>
+                        <label for="username">Uporabniško ime</label>
+                    </div>
+                    <div class="form-floating" style="padding-block-end: 0.15cm">
+                        <input type="email" class="form-control" placeholder="E-mail" name="email" required>
+                        <label for="email">E-mail</label>
+                    </div>
+                    <div class="form-floating" style="padding-block-end: 0.15cm">
+                        <input type="date" class="form-control" placeholder="Datum rojstva" name="birthday" required>
+                        <label for="birthday">Datum rojstva</label>
+                    </div>
+                    <div class="form-floating" style="padding-block-end: 0.15cm">
+                        <input type="text" class="form-control" placeholder="Naslov" name="address" required>
+                        <label for="address">Naslov</label>
+                    </div>
+                    <div class="form-floating" style="padding-block-end: 0.15cm">
+                        <input type="password" class="form-control" placeholder="Geslo" name="pwd" required>
+                        <label for="pwd">Geslo</label>
+                    </div>
+                    <div class="form-floating" style="padding-block-end: 0.45cm">
+                        <input type="password" class="form-control" placeholder="Ponovite geslo" name="pwd-repeat" required>
+                        <label for="pwd-repeat">Ponovite geslo</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="--bs-btn-padding-x:3.75cm">Potrdi</button>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="prijava.html"  data-bs-toggle="modal" data-bs-target="#prijavaMdl"><button type="button" class="btn btn-primary">Prijavi se zdaj!</button></a>
+            <button type="submit" class="btn btn-primary">Registriraj se</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+</body>
+</html>
